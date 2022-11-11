@@ -1,0 +1,83 @@
+<!--@css(/layout/basic/css/slideMenu.css)-->
+<!--@js(/layout/basic/js/slide_menu.js)-->
+<aside id="aside" module="layout_slidePackage">
+
+    <p module="Layout_statelogoff" class="member">
+        <a href="/member/login.html" class="btnLogin" ><i class="xi-long-arrow-right"></i> 로그인 해주세요.</a>
+        <a href="/member/agreement.html" class="btnJoin">Join</a>
+    </p>
+
+
+    <p module="Layout_stateLogon" class="member">어서오세요, 
+        <a href="/myshop/index.html">{$name}님</a>
+        <a href="{$action_logout}" class="join-icon"><i class="xi-log-out"></i></a>
+    </p>
+    
+    <div module="Layout_stateLogon">
+        <div module="myshop_main">
+            <a href="/myshop/index.html"><i class="xi-user-o"></i>마이쇼핑</a>
+        <a href="/order/basket.html"><i class="xi-cart-o"></i> 장바구니</a>
+        <a href="/myshop/board_list.html"><i class="xi-list-dot"></i> 게시물관리</a>
+        <a href="/member/modify.html"><i class="xi-profile"></i> 회원정보수정</a>
+        </div>
+    </div>
+
+    <div id="slideCateList" class="categoryCont">
+        <ul module="layout_category" class="categoryList">
+            <li id="cate{$cate_no}">
+                <a href="/product/list_thumb.html{$param}" class="view">{$name|cut 25}</a>
+                <a href="#none" class="cate" cate="{$param}"></a>
+            </li>
+            <li id="cate{$cate_no}">
+                <a href="/product/list_thumb.html{$param}" class="view">{$name|cut 25}</a>
+                <a href="#none" class="cate" cate="{$param}"></a>
+            </li>
+            <li class="nobyeonsu guide-margin"><a href="/shopinfo/guide.html">가입&이용안내</a></li>
+            <li class="nobyeonsu"><a href="/article/공지사항/1/60/page/1/">품절안내</a></li>
+            <li class="nobyeonsu"><a href="/board/free/list.html?board_no=1">공지사항</a></li>
+        </ul>
+
+        <!--콘텐츠 카테고리-->
+        <div id="slideProjectList" module="layout_project">
+            <h2 class="selected">기획전<button type="button" class="icoCategory">펼침</button></h2>
+            <ul class="categoryList">
+                <li id="cate{$cate_no}">
+                    <a href="#none" class="cate" cate="{$param}">{$category_text|cut 25}</a>
+                </li>
+                <li id="cate{$cate_no}">
+                    <a href="#none" class="cate" cate="{$param}">{$category_text|cut 25}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="multishop" module="Layout_multishopList" id="slideMultishopList">
+            <h2 class="selected countryTitle">SHIP TO<button type="button" class="icoCategory">펼침</button></h2>
+            <ul module="Layout_multishopListmultioptionCountry" class="xans-element- xans-multishop xans-multishop-listitem">
+                <li>
+                    <a href="#none" class="countryLink"></a>
+                </li>
+            </ul>
+            <h2 class="selected languageTitle">LANGUAGE<button type="button" class="icoCategory">펼침</button></h2>
+            <ul module="Layout_multishopListmultioptionLanguage" class="xans-multishop xans-multishop-listitem">
+                <li>
+                    <a href="#none" class="languageLink">
+                        <img src="//img.cafe24.com/img/common/global/{$language_code}_53x36.png" width="27" height="18" alt=""><span class="name"> {$language_name}</span>
+                    </a>
+                </li>
+            </ul>
+            <h2 class="selected">{$translate_language}<button type="button" class="icoCategory">펼침</button></h2>
+            <ul module="multishop_listitem">
+                <li class="{$selected_class}">
+                    <a href="//{$shop_domain}/">
+                        <img src="//img.cafe24.com/img/common/global/{$language}_53x36.png" width="27" height="18" alt=""><span class="name"> {$shop_name}</span>
+                    </a>
+                </li>
+                <li class="{$selected_class}">
+                    <a href="//{$shop_domain}/">
+                        <img src="//img.cafe24.com/img/common/global/{$language}_53x36.png" width="27" height="18" alt=""><span class="name"> {$shop_name}</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</aside>
+<div class="btnClose"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_close.png" width="13" alt="닫기"></div>

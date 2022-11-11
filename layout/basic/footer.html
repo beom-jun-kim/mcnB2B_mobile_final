@@ -1,0 +1,167 @@
+<section id="my-page">
+    <div class="my_page-wrap">
+        <a href="/board/free/list.html?board_no=1">
+            <i class="fas fa-bullhorn"></i>
+            <h5>공지사항</h5>
+        </a>
+        <a href="/board/free/list.html?board_no=6">
+            <i class="fas fa-question"></i>
+            <h5>상품문의</h5>
+        </a>
+        <a href="/board/free/list.html?board_no=3">
+            <i class="fas fa-clipboard-list"></i>
+            <h5>FAQ</h5>
+        </a>
+        <a href="/myshop/order/list.html">
+            <i class="fas fa-truck"></i>
+            <h5>주문조회</h5>
+        </a>
+    </div>
+</section>
+
+<section id="time-info">
+    <div class="info-wrap">
+        <div class="info_wrap-box">
+            <div class="info-box">
+                <div class="contract-tel">
+                    <h3>계약관련 문의</h3>
+                    <a href="tel:070-4902-3104">
+                        <h3 class="phone-num"><i class="xi-microphone"></i>070-4902-3104</h3>
+                    </a>
+                </div>
+                <div class="contract-time">
+                    <p>평일 오전 10:00 - 오후 06:00<br> (토,일,공휴일 휴무)</p>
+                </div>
+                <div class="contract-exchange">
+                    <p>교환/반품 문의 : 1566-8657</p>
+                </div>
+                <div class="contract-fax">
+                    <p>FAX : 053-561-8691</p>
+                </div>
+                <div class="contract-postal">
+                    <p>우편등기 : 대구광역시 서구<br>국채보상로 282 MCN 빌딩<br> 3층, B2B 담당자 앞</p>
+                </div>
+            </div>
+            <div class="info-box">
+                <div class="contract-tel">
+                    <div class="bank_inner">
+                     <H3>무통장입금 안내</H3>
+                     <ul class="contract-time">
+                        <li class="money-num">기업 150-072681-01-018</li>
+                         <li>예금주 : 황재웅</li>
+                     </ul>
+                     <select onchange="window.open(this.value);" name="select">
+                         <option value=""> 인터넷뱅킹 바로가기 </option>
+                         <option value="http://www.kbstar.com"> 국민은행 </option>
+                         <option value="http://www.scfirstbank.com"> 제일은행 </option>
+                         <option value="http://www.wooribank.com"> 우리은행 </option>
+                         <option value="http://www.kiupbank.co.kr"> 기업은행 </option>
+                         <option value="http://www.kjbank.com"> 광주은행 </option>
+                         <option value="http://www.daegubank.co.kr"> 대구은행 </option>
+                         <option value="http://www.hanabank.com"> 하나은행 </option>
+                         <option value="http://www.shinhan.com"> 신한은행 </option>
+                         <option value="http://www.keb.co.kr"> 외환은행 </option>
+                         <option value="http://www.jbbank.co.kr"> 전북은행 </option>
+                         <option value="https://www.busanbank.co.kr/"> 부산은행 </option>
+                         <option value="http://www.chb.co.kr"> 조흥은행 </option>
+                         <option value="https://www.hanmi.com/ko"> 한미은행 </option>
+                         <option value="http://www.chejubank.co.kr"> 제주은행 </option>
+                         <option value="https://www.knbank.co.kr/"> 경남은행</option>
+                         <option value="http://www.epostbank.go.kr"> 우체국 </option>
+                         <option value="http://banking.nonghyup.com"> 농협 </option> 
+                     </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer module="layout_footerPackage">
+    <!--@css(/css/module/layout/footerPackage.css)-->
+    <div class="footerMenu">
+        <ul class="policy">
+            <li><a href="/shopinfo/company.html">회사소개</a></li>
+            <li><a href="/member/mall_agreement.html">이용약관</a></li>
+            <li><a href="/member/privacy.html"><strong>개인정보처리방침</strong></a></li>            
+            <li><a href="/shopinfo/guide.html">이용안내</a></li>
+            <li><a href="#none" onclick="javascript:isPCver();" style="white-space: nowrap;">PC ver.</a></li>           
+        </ul>        
+    </div>
+    <!--고객센터/입금계좌안내-->
+    <address module="Layout_footer">
+        <div class="ft_item_area">
+            <div class="info_foot_co ft_line" module="Layout_Info">
+                <a href="tel:1566-8657">
+                    <span class="call-center">CALL CENTER</span>
+                    <span class="phone_num">{$phone}</span>
+                    <span class="inner_num-three">내선3번</span>
+                </a>
+            </div>
+        </div>
+        <div class="address">
+            <div class="address_wrap">
+                <span>법인명(상호) : {$company_name} </span><span>대표자(성명) : {$president_name}</span><br><span>사업자 등록번호 안내 : {$company_regno}</span><!-- <span>통신판매업 신고 {$network_regno}</span> <span>{$biz_no_link}</span> // 통신판매신고번호--><br>
+                <span>전화 : {$phone}</span><span>팩스 : {$fax}</span><br>
+                <span class="{$cpo_email|display}">개인정보보호책임자 : <a href="mailto:{$cpo_email}">{$cpo_name}({$cpo_email})</a></span>
+            </div>
+        </div>
+        <p class="copyright">Copyright &copy; {$mall_name}. All rights reserved.</p>
+        <div class="echosting_banner">
+            <div class="img-box">
+                <img src="//img.echosting.cafe24.com/skin/admin_ko_KR/common/admin_fair_trade.gif" alt="공정거래위원회 인증표준약관사용">
+            </div>
+            <div class="img-box">
+                <img src="//img.echosting.cafe24.com/skin/admin_ko_KR/common/admin_cafe24.gif" alt="카페24의 안전한 시스템을 사용합니다.">
+            </div>
+            <div class="img-box">
+                <img src="//img.echosting.cafe24.com/skin/admin_ko_KR/common/admin_ssl.gif" alt="SSL 결제보안 인증사이트">
+            </div>
+        </div>
+    </address>
+</footer>
+<div id="progressPaybar" style="display:none;">
+    <div id="progressPaybarBackground" class="layerProgress"></div>
+    <div id="progressPaybarView">
+        <p class="graph">현재 결제가 진행중입니다.</p>
+        <p class="txt">
+            본 결제 창은 결제완료 후 자동으로 닫히며, <br>
+            결제 진행 중에 본 결제 창을 닫으시면<br>
+            주문이 되지 않으니 <br>
+            결제 완료 될 때 까지 닫지 마시기 바랍니다.
+        </p>
+    </div>
+</div>
+<div module="Layout_multishopShipping" class="ec-base-layer typeModal">
+    <!--@css(/css/module/layout/multishopShipping.css)-->
+    <!--@js(/js/module/layout/multishopShipping.js)-->
+    <h1>WORLD SHIPPING</h1>
+    <div class="wrap worldshipLayer">
+        <p class="desc">PLEASE SELECT THE DESTINATION COUNTRY AND LANGUAGE :</p>
+        <div class="select">
+            <select module="Layout_multishopShippingCountrylist">
+                <option value="{$country_code}"{$country_default_selected}>SHIPPING TO : {$country_name}</option>
+                <option value="{$country_code}"{$country_default_selected}>SHIPPING TO : {$country_name}</option>
+            </select>
+        </div>
+        <div class="select">
+            <select module="Layout_multishopShippingLanguagelist">
+                <option value="{$shop_domain}"{$shop_default_selected}>LANGUAGE : {$shop_language_name}</option>
+                <option value="{$shop_domain}"{$shop_default_selected}>LANGUAGE : {$shop_language_name}</option>
+            </select>
+        </div>
+    </div>
+    <div class="ec-base-button gFull">
+        <a href="#none" class="btnSubmit">GO</a>
+    </div>
+    <a href="#none" class="btnClose">닫기</a>
+</div>
+<div class="btnTop" id="btnTop">
+    <a href="#">
+        <div class="top-arrow"><i class="fas fa-chevron-up"></i></div> 
+        <div class="top-text">TOP</div>
+    </a>
+</div>
+<div module="mobilequick_display">
+    {$quick_link}
+    {$quick_button}
+</div>

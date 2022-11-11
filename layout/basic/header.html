@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+<!-- js -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>           
+           
+           <header id="header">
+                <div class="header">
+                    <section id="topArea">
+                        <div class="searchWrap">   
+                            <p class="category"><a href="#none" class="fold">카테고리</a></p>
+                            <h1 module="Layout_LogoTop">
+                                <a href="/index.html">MCN <span class="title-b2b">B2B</span> MALL</a>
+                            </h1>
+                            <div module="Layout_stateLogon">
+                                <p class="search"><button type="button"><i class="xi-search" style="font-size: 23px;"></i></button></p></button>
+                            </div>
+                            <div module="Layout_stateLogoff" style="visibility: hidden;">
+                                <p class="search"><button type="button"><i class="xi-search"></i></button></p></button>
+                            </div>
+                        </div>
+ 
+                        <nav id="mainMenu" module="Layout_MobileMaincategory">
+                            <!--
+                                $swipe = yes
+                                $plugin = category
+                                $generate = no
+                                $gird = 3
+                                $display = no
+                            -->
+                            <ul>
+                                <li>
+                                    <ul>
+                                        <li module="Mobile_Categoryname_1" data-seq="{$display_group}"><a href="#none">{$category_name}</a></li>
+                                        <li module="Mobile_Categoryname_2" data-seq="{$display_group}"><a href="#none">{$category_name}</a></li>
+                                        <li module="Mobile_Categoryname_3" data-seq="{$display_group}"><a href="#none">{$category_name}</a></li>
+                                    </ul>
+                                </li>
+                                <li class="afterNone">
+                                    <ul>
+                                        <li module="Mobile_Categoryname_4" data-seq="{$display_group}"><a href="#none">{$category_name}</a></li>
+                                    </ul>
+                                </li>
+                             </ul>
+                            <p class="btnPrev"><a href="#none"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_prev.png" width="8" height="13" alt="이전"></a></p>
+                            <p class="btnNext"><a href="#none"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_next.png" width="8" height="13" alt="다음"></a></p>
+                        </nav>
+                    </section>
+                    <!--@import(/layout/basic/search.html)-->
+                </div>
+            </header>

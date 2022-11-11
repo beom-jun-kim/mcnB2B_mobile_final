@@ -1,0 +1,105 @@
+body { position:relative; height:100%; }
+#wrap { min-height:100%; }
+
+html.expand body { position:fixed; top:0; left:0; width:100%; }
+html.expand #container { -webkit-transform: translate(81%, 0); -moz-transform: translate(81%, 0); -ms-transform: translate(81%, 0); transform: translate(81%, 0);}
+html.expand #btnFoldLayout { z-index:405; }
+html.expand #aside { z-index:0; overflow-x:hidden; }
+
+#aside {visibility:hidden; position:absolute; left:0; top:0; bottom:0; width:81%; font-size:11px; background-color:#fff;}
+
+#aside h1 {width:100%; text-align:center; margin:20px auto 20px !important;}
+#aside h1 img {height:18px; vertical-align:middle;}
+
+#aside .member {margin-bottom:17px; height: 47.6px; line-height: 47.60px;}
+#aside .member  strong {color:#202020; text-decoration:underline;}
+#aside .member.xans-layout-statelogon a,
+#aside .member.xans-layout-statelogoff a { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+#aside .member.xans-layout-statelogoff a {border-bottom: 1px solid #eee; float:left;}
+#aside .member a.btnLogout,
+#aside .member a.btnLogin {margin-right:0; color: var(--primary-color); width: 70%; font-size: 1.1rem; font-weight: bold; padding-left: 20px;}
+#aside .member a.btnJoin {background: var(--primary-color); color: #fff; width: 30%; text-align: center; font-size: 1.2rem; font-weight: bold;}
+#aside .member i.xi-long-arrow-right {font-weight: 800;}
+
+.xans-layout-statelogon.member {position: relative; line-height: 38px; padding: 0 1rem; font-size: 1.1rem; font-weight: bold; border-bottom: 1px solid #eee; color: var(--primary-color);}
+.xans-layout-statelogon.member a {color: var(--primary-color);}
+.xans-layout-statelogon.member a i {font-size: 1.5rem; color: #000;}
+.xans-layout-statelogon.member a.join-icon {position: absolute; top: 5px; right: 13px;}
+
+.btnClose {position:absolute; top:69%; left: 0; padding:13px; background: #fff; z-index: 9999; padding:13px; border: thin solid #eee; visibility: hidden; opacity: 0;}
+.btnClose.active {left: 81%; transition: 270ms; visibility: visible; opacity: 1;} 
+
+#aside .membership { padding:0 14px 11px; }
+#aside .membership li { display:inline-block; margin:0 15px 0 0; padding:10px 0 0; }
+#aside .membership li a { color:#000; }
+#aside .membership li.like a { color:#000; }
+#aside .membership li.like a span { color:#000; }
+#aside .xans-myshop-main { display: flex; justify-content: flex-end; border: none;}
+#aside .xans-myshop-main a {display: flex; flex-direction: column; justify-content: center; float:left; width:23.5%; height: 76px; background: #f4f4f6; color: #909091; text-align:center; border-right:0; margin-left: 3px; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-sizing:border-box; box-sizing:border-box;}
+#aside .xans-myshop-main a i {font-size: 25px; margin-bottom: 5px;}
+#aside .xans-myshop-main:after { content:""; display:block; clear:both; }
+
+#aside .categoryList {padding:5px 0 5px; font-size:12px;}
+#aside .categoryList ul { display:none; }
+#aside .categoryList li { position:relative; }
+#aside .categoryList li.selected > ul { display:block; }
+#aside .categoryList li.selected > a.cate { color:#202020; }
+#aside .categoryList li.noChild > a.cate { background-image:none !important;}
+#aside .categoryList > li.selected .slideSubMenu li { font-weight:normal; color: #444; font-weight: 300; display: inline-block; width: 30.3333%; text-align: center;}
+#aside .categoryList > li.selected .slideSubMenu li:last-child {margin-bottom: 10px;}
+#aside .categoryList > li.selected .slideSubMenu li a.cate { background: none; border-top:0; color: #6e6e6e;}
+#aside .categoryList > li.selected .slideSubMenu li a.view {opacity: 0; width: 80%; height: 80%;}
+#aside .categoryList > li { font-weight:bold; font-size: 14px;  line-height: 40px;}
+#aside .categoryList > li:first-child { border-top:0; }
+#aside .categoryList > li > a.cate {background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/bg_snb_1depth.gif") no-repeat 95% 52%;  background-size:13px 8px; border-top: 1px solid #e8e8e8;}
+#aside .categoryList > li#cate197 > a.cate {border-bottom: 1px solid #e8e8e8;}
+#aside .categoryList > li:first-child > a.cate {border-top:none}
+#aside .categoryList > li.selected > a.cate { background-image:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/bg_snb_1depth_on.gif"); }
+#aside .categoryList > li > ul > li > a.cate { border-top:1px solid #eee; white-space: nowrap; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/bg_snb_2depth.gif") no-repeat 10px 51%; background-size:10px 10px;}
+#aside .categoryList > li > ul > li > ul > li > a.cate { padding-left:45px; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/bg_snb_2depth.gif") no-repeat 29px 50%; background-size:10px 10px; }
+#aside .categoryList > li > ul > li > ul > li.selected > a.cate { border-bottom:1px solid #eee; background-image:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/bg_snb_2depth_on.gif"); background-size:13px 2px;}
+#aside .categoryList > li > ul > li > ul > li > ul > li a.cate { padding-left:55px; }
+#aside .categoryList a.cate {display:block; height: 40px; word-wrap:break-word;}
+#aside .categoryList a.view {position:absolute; top: 0; left:15px; height: 100%; -webkit-border-radius:3px; -moz-border-radius:3px; -ms-border-radius:3px; border-radius:0px;}
+#aside .categoryList .nobyeonsu {padding-left: 15px; border-bottom: 1px solid #e8e8e8;}
+#aside .categoryList .guide-margin {margin-top: 20px;}
+#aside .categoryList .nobyeonsu a {color: #008BCC;}
+
+/*콘텐츠 카테고리*/
+.contPage > li:first-child a.cateBoard {margin-top:10px; border-top-color:#202020 !important;}
+#aside .categoryList > li > a.cateBoard { display:block; padding:0 90px 0 15px; border-top:1px solid #eee; word-wrap:break-word;}
+#aside .categoryList > li:nth-child(11).selected .slideSubMenu li {width: 50%;}
+
+/* 즐겨찾기 리스트 */
+#aside .bookmarkCategory { font-size:13px; }
+#aside .bookmarkCategory li { position:relative; border-bottom:1px solid #cccccc; border-top:1px solid #fff; }
+#aside .bookmarkCategory li:first-child { border-top:0; }
+#aside .bookmarkCategory li.selected { background-color:#000; }
+#aside .bookmarkCategory li a { display:block; margin-right:35px; padding:11px 10px 11px 17px; word-wrap:break-word; }
+#aside .bookmarkEmpty { padding:8px 0 6px 12px; border-bottom:1px solid #cccccc; color:#798490; font-size:11px; line-height:16px; background:#f1f1f1; }
+#aside .bookmarkEmpty img { width:11px; height:11px; vertical-align:-1px; }
+
+/* 즐겨찾기 아이콘 */
+#aside .xans-layout-category li .icoBookmark,
+#aside .bookmarkCategory li .icoBookmark { overflow:hidden; position:absolute; right:1px; top:0; width:30px; height:41px; padding:0; border:0; text-indent:100%; white-space:nowrap; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_bookmark.png") no-repeat 5px 14px; background-size:13px 13px; cursor:pointer; }
+#aside .xans-layout-category li .icoBookmark.selected,
+#aside .bookmarkCategory li .icoBookmark.selected { background-image:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_bookmark_on.png"); }
+
+/* 배송국가 */
+#aside .multishop .xans-layout-multishoplistmultioptioncountry li a { padding:9px 10px 11px 17px; font-size:13px; }
+
+/* 멀티쇼핑몰 */
+#aside .xans-multishop-listitem li { border-bottom:1px solid #cccccc; border-top:1px solid #fff; background-color:#f1f1f1; }
+#aside .xans-multishop-listitem li:first-child { border-top:0; }
+#aside .xans-multishop-listitem li a { display:block; padding:6px 10px 6px 14px; word-wrap:break-word; }
+#aside .xans-multishop-listitem li a .name { margin:0 0 0 5px; font-size:13px; vertical-align:middle; }
+
+/* 로그인,로그아웃 */
+#aside .loginState { padding:8px 0 8px 14px; min-height:50px; }
+#aside .loginState p { display:inline-block; width:auto; padding:5px 7px; border:1px solid #d5d5d5; border-radius:3px; }
+#aside .loginState p a { color:#1b1b1b; }
+
+#container {z-index:100; position:relative; overflow:hidden; margin-top:-1px; margin-left:-1px; background-color:#fff; -webkit-transition:300ms; -moz-transition:300ms; -ms-transition:300ms; transition:300ms; -webkit-backface-visibility: hidden; -ms-backface-visibility: hidden; backface-visibility: hidden;}
+#btnFoldLayout {display:none; position:absolute; left:81%; top:0; right:0; bottom:0; width:100%; height:100%; opacity:0; -webkit-tap-highlight-color:rgba(0, 0, 0, 0); -webkit-focus-ring-color:rgba(0, 0, 0, 0);}
+ 
+.categoryList .icoBookmark {display: none;}
